@@ -6,7 +6,6 @@ module.exports = function toReadable(number) {
     }
 
     if (number >= 100) {
-        console.log((number % 100 == 0) ? '' : (' ' + toReadable(number % 100)));
         result = toReadable(Math.floor(number / 100)) + ' hundred' + (number % 100 == 0 ? '' : ' ' + toReadable(number % 100));
     } else if (number < 20) {
         switch (number) {
